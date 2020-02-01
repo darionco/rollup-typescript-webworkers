@@ -1,0 +1,37 @@
+{
+  "name": "rollup-typescript-webworkers",
+  "version": "0.0.1",
+  "description": "Example of using RollupJS + TypeScript + WebWorkers",
+  "author": "Dario Segura",
+  "license": "MIT",
+  "entry": "src/index.ts",
+  "main": "dist/next/index.js",
+  "module": "dist/next/index.js",
+  "iife": "dist/iife/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "npm-run-all --parallel build:**",
+    "build:all": "rollup --config",
+    "build:types": "tsc --declaration --declarationMap --emitDeclarationOnly --outDir ./dist/types",
+    "start": "cross-env TARGET='debug' rollup --config --watch",
+    "watch": "rollup --config --watch",
+    "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
+    "prepack": "npm-run-all build"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "cross-env": "^7.0.0",
+    "eslint": "^6.8.0",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.31.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-live-server": "^1.0.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.5.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "rollup-plugin-web-worker-loader": "^0.8.1",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.5"
+  }
+}
