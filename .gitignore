@@ -1,9 +1,6 @@
-.DS_Store
 node_modules
-.idea
-dist
-
-www/keys/*
-keys/*.p8
-server/*.pem
-server/*.crt
+.rts2_cache/
+.idea/
+dist/
+*.log
+.DS_Store
