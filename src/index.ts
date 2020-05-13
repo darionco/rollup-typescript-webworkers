@@ -1,6 +1,4 @@
 import {MessageManager} from './MessageManager';
-
-// @ts-ignore
 import WebWorker from 'web-worker:./Worker.ts';
 
 function main(): void {
